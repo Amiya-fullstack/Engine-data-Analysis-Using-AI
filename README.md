@@ -1,18 +1,3 @@
-It is structured for a real GitHub project and includes:
-
-* Project overview
-* Architecture explanation (aligned to your diagram)
-* Tech stack
-* Multi-agent workflow
-* Setup instructions
-* Data ingestion notes (Graph DB + Vector DB)
-* API flow
-* Future enhancements
-
-You can copy-paste this directly into your repository’s  README.md .
-
----
-
 #  Intelligent Multi-Agent RAG System with Graph + Vector Databases 
 
 This project implements an enterprise-grade  Retrieval-Augmented Generation (RAG)  system powered by  multi-agent orchestration ,  graph-based reasoning ,  vector search , and  MCP (Model Context Protocol)  tooling.
