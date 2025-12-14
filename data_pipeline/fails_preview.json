@@ -1,0 +1,30 @@
+[
+  {
+    "unit_id": "unit_1",
+    "ts": "2025-01-01T21:42:00",
+    "event_id": "e7a6eb8f-698d-4f6e-bec4-2ec41a5a5575",
+    "severity": 1,
+    "type": "component_failure"
+  },
+  {
+    "unit_id": "unit_2",
+    "ts": "2025-01-03T02:57:00",
+    "event_id": "dc3d7752-f2d8-47fe-8fad-fad877395811",
+    "severity": 1,
+    "type": "component_failure"
+  },
+  {
+    "unit_id": "unit_4",
+    "ts": "2025-01-05T06:46:00",
+    "event_id": "5af7cb16-6987-4771-b806-e84be40793c8",
+    "severity": 1,
+    "type": "component_failure"
+  },
+  {
+    "unit_id": "unit_5",
+    "ts": "2025-01-06T03:41:00",
+    "event_id": "367a0d93-95c2-4b3c-add3-539676d63a88",
+    "severity": 1,
+    "type": "component_failure"
+  }
+]

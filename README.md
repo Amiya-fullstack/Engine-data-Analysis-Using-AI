@@ -206,6 +206,8 @@ docker compose up chroma
 uvicorn api.server:app --reload
 ```
 
+Verify the API health-check at: http://localhost:8000/health/ping
+
 ###  6. Start MCP Runtime 
 
 ```bash
@@ -233,6 +235,41 @@ python data_pipeline/embedding_pipeline.py
 ```bash
 python data_pipeline/sensor_ingestion.py
 ```
+
+Note: this repository includes a robust ingestion script `data_pipeline/Load_Engn_Data.py` which supports both a safe preview mode and a full ingestion mode that writes into Neo4j.
+
+Examples:
+
+- Safe preview (no DB writes; writes preview JSON to `data_pipeline/`):
+
+```powershell
+python data_pipeline/Load_Engn_Data.py --csv data_sources/synthetic_engine_data.csv --dry-run
+```
+
+- Full ingestion (writes to Neo4j). Ensure Neo4j is running (e.g., via Docker) and use correct credentials:
+
+```powershell
+python data_pipeline/Load_Engn_Data.py --csv data_sources/synthetic_engine_data.csv --neo4j bolt://localhost:7687 --user neo4j --password <your_password> --batch 500 --make-windows
+```
+
+Notes:
+- Use `--make-windows --window-size <N> --stride <S>` to compute aggregated FeatureWindow nodes.
+- FeatureWindow `features` are serialized as JSON and stored in `fw.features_json` to ensure compatibility with Neo4j property types.
+- Preview files (created with `--dry-run`):
+   - `data_pipeline/engines_preview.json`
+   - `data_pipeline/ingest_preview.json`
+   - `data_pipeline/fails_preview.json`
+   - `data_pipeline/windows_preview.json`
+
+Utilities added to assist with ingestion and verification:
+- `scripts/cleanup_db.py` — remove `SensorReading`, `FailureEvent`, and `FeatureWindow` nodes (keeps `Engine` nodes) for clean re-runs.
+- `scripts/db_counts.py` — print counts of Engine / SensorReading / FailureEvent / FeatureWindow nodes.
+- `scripts/test_windows.py` — quick test harness for windowing logic.
+
+Documentation generated from `data_sources/engine_spec_data.doc`:
+- `docs/failure_modes/` — per-FM pages (FM-01..FM-06)
+- `docs/maintenance_manuals/` — step-by-step maintenance procedures
+- `docs/specifications/engine_specification.md` — sensor definitions, thresholds and diagnostic rules
 
 ---
 
