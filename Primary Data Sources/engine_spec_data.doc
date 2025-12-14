@@ -1,0 +1,251 @@
+  FM-01: Progressive Turbine Imbalance
+
+Category: Mechanical Degradation
+Primary Sensor: sensor_1, sensor_4, sensor_5
+
+Description
+
+This failure mode represents progressive mechanical imbalance in the high-speed turbine shaft. It is typically driven by mass asymmetry, blade erosion, or thermal-induced warping.
+
+Trigger Conditions
+sensor_1 < -0.65 g for ≥ 4 consecutive minutes
+sensor_4 > 2.5 °C above baseline
+RUL decreases faster than 1.5 units/min
+
+Root Causes
+
+Thermal deformation of turbine blades
+
+Debris accumulation in the rotor
+
+Worn or misaligned shaft bearings
+
+Early Indicators
+
+Increased low-frequency vibration signatures
+
+Slight rise in temperature delta (sensor_4)
+
+Mild reduction in efficiency
+
+Operational Impact
+
+5–18% reduction in turbine efficiency
+
+Risk of catastrophic seizure within 10–20 cycles
+
+Recommended Actions
+
+Perform shaft balance inspection
+
+Remove rotor casing and check for asymmetric blade wear
+
+Reset vibration thresholds post-maintenance
+
+  FM-02: Compressor Fuel-Air Mixing Deviation
+
+Category: Combustion System Fault
+Primary Sensor: sensor_2
+
+Description
+
+Fault detected when the fuel–air mixture deviates from optimal ratios, impacting combustion efficiency and emissions.
+
+Trigger Conditions
+sensor_2 < -0.20 deviation index
+sensor_2 drift > 0.3 within 10 minutes
+
+Root Causes
+
+Fuel injector partial blockage
+
+Compressor pressure oscillation
+
+Sensor calibration drift
+
+Early Indicators
+
+Mild combustion instability (sensor_3 oscillations)
+
+Increase in exhaust opacity
+
+Sluggish acceleration response
+
+Operational Impact
+
+4–9% efficiency loss
+
+Increased exhaust temperature ripple
+
+Recommended Actions
+
+Inspect fuel delivery manifold
+
+Recalibrate mixture control system
+
+Replace injector if fouling detected
+
+  FM-03: Combustion Instability Event
+
+Category: Thermal/Fluid Dynamic Fault
+Primary Sensor: sensor_3, sensor_4
+
+Description
+
+Represents unstable combustion leading to fluctuating pressure and temperature cycles inside the combustion chamber.
+
+Trigger Conditions
+sensor_3 oscillation amplitude > 0.35
+sensor_4 > 2.0 °C for ≥ 3 cycles
+
+Root Causes
+
+Distorted airflow patterns
+
+Residual gas buildup
+
+Malfunctioning igniter sequence
+
+Early Indicators
+
+Rapid RUL decline (> 2 units/min)
+
+Irregular turbine temperature deltas
+
+Audible irregular combustion pulses
+
+Operational Impact
+
+Thermal fatigue to turbine blades
+
+Accelerated mechanical wear
+
+Recommended Actions
+
+Run airflow harmonization test
+
+Inspect igniter wiring and spark profile
+
+Clean compressor intake vanes
+
+  FM-04: Turbine Overheat Condition
+
+Category: Thermal Overload
+Primary Sensor: sensor_4
+
+Description
+
+Occurs when turbine temperature rises above safe thresholds due to operational overload, airflow restriction, or cooling inefficiency.
+
+Trigger Conditions
+sensor_4 > 3.0 °C for 2+ consecutive readings
+
+Root Causes
+
+Cooling duct obstruction
+
+Reduced airflow from compressor
+
+Excessive combustion heat due to fuel-rich conditions
+
+Early Indicators
+
+Spike in sensor_4 without corresponding sensor_1 vibration increase
+
+Rising auxiliary pump load (sensor_6)
+
+Operational Impact
+
+Accelerated blade oxidation
+
+Potential micro-cracking in turbine housing
+
+Recommended Actions
+
+Inspect cooling ducts for blockages
+
+Verify airflow through compressor stage
+
+Inspect turbine insulation integrity
+
+  FM-05: Bearing Wear Acceleration
+
+Category: Mechanical Wear
+Primary Sensor: sensor_5, secondary: sensor_1, sensor_6
+
+Description
+
+Represents rapid degradation of shaft bearings, increasing friction and causing cascading mechanical failure.
+
+Trigger Conditions
+sensor_5 < -0.75 friction index
+sensor_1 shows correlated vibration > 0.4 deviation
+sensor_6 increases by > 0.1 compensation load
+
+Root Causes
+
+Lubricant breakdown
+
+Bearing surface scoring
+
+Overheating from chemical degradation
+
+Early Indicators
+
+Gradual downward trend in sensor_5
+
+Increased energy consumption by auxiliary pump
+
+Operational Impact
+
+Higher vibration → risk of shaft misalignment
+
+Imbalance onset leading to FM-01
+
+Recommended Actions
+
+Perform lubrication refresh
+
+Inspect bearing assembly under magnification
+
+Run friction calibration cycle
+
+  FM-06: Auxiliary Pump Load Surge
+
+Category: Support System Fault
+Primary Sensor: sensor_6
+
+Description
+
+Indicates abnormal increased load in the auxiliary pump, often compensating for friction, temperature anomalies, or fluid resistance.
+
+Trigger Conditions
+sensor_6 > 0.20 load index
+
+Root Causes
+
+Pump cavitation
+
+Hydraulic line blockage
+
+Increased resistance due to turbine overheating
+
+Early Indicators
+
+Slight correlated rise in sensor_4
+
+Slower RUL decrement followed by sudden drop
+
+Operational Impact
+
+Reduced cooling efficiency
+
+Failure to maintain pressure regulation
+
+Recommended Actions
+
+Inspect hydraulic circuits
+
+Evaluate cooling flow rate
+
+Replace pump impeller if cavitation marks detected
