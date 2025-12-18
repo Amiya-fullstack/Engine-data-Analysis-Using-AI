@@ -1,0 +1,32 @@
+[
+  {
+    "id": "FM-01",
+    "title": "Progressive Turbine Imbalance",
+    "source": "D:\\Practice\\AI agents\\Industrial AI MCP GIT\\Engine-data-Analysis-Using-AI\\data_sources\\engine_spec_data.doc"
+  },
+  {
+    "id": "FM-02",
+    "title": "Compressor Fuel-Air Mixing Deviation",
+    "source": "D:\\Practice\\AI agents\\Industrial AI MCP GIT\\Engine-data-Analysis-Using-AI\\data_sources\\engine_spec_data.doc"
+  },
+  {
+    "id": "FM-03",
+    "title": "Combustion Instability Event",
+    "source": "D:\\Practice\\AI agents\\Industrial AI MCP GIT\\Engine-data-Analysis-Using-AI\\data_sources\\engine_spec_data.doc"
+  },
+  {
+    "id": "FM-04",
+    "title": "Turbine Overheat Condition",
+    "source": "D:\\Practice\\AI agents\\Industrial AI MCP GIT\\Engine-data-Analysis-Using-AI\\data_sources\\engine_spec_data.doc"
+  },
+  {
+    "id": "FM-05",
+    "title": "Bearing Wear Acceleration",
+    "source": "D:\\Practice\\AI agents\\Industrial AI MCP GIT\\Engine-data-Analysis-Using-AI\\data_sources\\engine_spec_data.doc"
+  },
+  {
+    "id": "FM-06",
+    "title": "Auxiliary Pump Load Surge",
+    "source": "D:\\Practice\\AI agents\\Industrial AI MCP GIT\\Engine-data-Analysis-Using-AI\\data_sources\\engine_spec_data.doc"
+  }
+]
