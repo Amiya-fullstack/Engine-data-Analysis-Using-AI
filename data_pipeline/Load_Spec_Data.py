@@ -132,7 +132,7 @@ def main() -> None:
                     save_fn(Path(args.index_path))
                 except Exception:
                     LOG.exception("Failed to save FAISS index")
-        print(f"✅ Stored {count} spec documents into vector DB ({args.store})")
+        print(f"Stored {count} spec documents into vector DB ({args.store})")
     except Exception as exc:  # pragma: no cover - simple CLI error reporting
         LOG.exception("Failed to load and store spec data: %s", exc)
 
