@@ -1,7 +1,8 @@
 #  Intelligent Multi-Agent RAG System with Graph + Vector Databases 
 
-This project implements an enterprise-grade  Retrieval-Augmented Generation (RAG)  system powered by  multi-agent orchestration ,  graph-based reasoning ,  vector search , and  MCP (Model Context Protocol)  tooling.
-It is designed for high-accuracy factual responses using structured + unstructured data.
+This project implements an enterprise-inspired Retrieval-Augmented Generation (RAG) system using a multi-agent architecture, graph-based reasoning, vector search, and MCP (Model Context Protocol) tooling.
+
+The system focuses on generating accurate, grounded responses from a combination of structured and unstructured data.
 
 ---
 
@@ -18,6 +19,24 @@ The system integrates:
 
 Below is the architecture diagram this repository follows:
 ![alt text](RAG(1).jpg)
+
+---
+
+## Scope and Non-Goals
+
+This project is a **prototype and reference architecture**.
+
+In scope:
+- Fixed dataset ingestion
+- Multi-agent orchestration
+- Graph + vector retrieval
+- MCP-based tool calling
+
+Out of scope:
+- Production security and authentication
+- Horizontal scaling
+- Real-time streaming ingestion
+- Model fine-tuning
 
 ---
 
